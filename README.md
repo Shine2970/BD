@@ -32,6 +32,10 @@ SELECT * FROM orders WHERE STATUS IN ('cancelled','in_progress','delivery')
 
 3.Добавьте в таблицу orders данные о новом заказе стоимостью 8000 рублей. В заказе 4 товара (products).
 
+![image](https://github.com/user-attachments/assets/11d54dfc-f39b-4381-8b39-08db0a22c9a2)
+
+![image](https://github.com/user-attachments/assets/7472531a-e42f-458c-9899-9699d2e65cea)
+
 Лр 3 
 
 Создайте таблицу users с полем id типа INT и двумя текстовыми полями, которые будут хранить имя (first_name) и фамилию (last_name). Длина имени и фамилии не превышает 50 символов.

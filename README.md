@@ -36,6 +36,18 @@ SELECT * FROM orders WHERE STATUS IN ('cancelled','in_progress','delivery')
 
 ![image](https://github.com/user-attachments/assets/7472531a-e42f-458c-9899-9699d2e65cea)
 
+4.Добавьте в таблицу products новый товар — «VR-очки», стоимостью 70000 рублей в количестве (count) 2 штук.
+
+ ![image](https://github.com/user-attachments/assets/dabf7dc4-b441-4a55-8bea-48950d5cd7dc)
+
+ ![image](https://github.com/user-attachments/assets/0154c806-38a1-45b6-b78f-ca24592eaeb0)
+
+5.В таблицу products внесли данные с ошибкой, вместо "PS5" в наименовании написали IMAC. Исправьте ошибку.
+
+![image](https://github.com/user-attachments/assets/45f95fbc-ed0f-4fd9-bc35-5b8a190ecc46)
+
+![image](https://github.com/user-attachments/assets/1288a625-6daf-4162-8be0-1e61b328eea4)
+
 Лр 3 
 
 Создайте таблицу users с полем id типа INT и двумя текстовыми полями, которые будут хранить имя (first_name) и фамилию (last_name). Длина имени и фамилии не превышает 50 символов.

@@ -1,9 +1,11 @@
 ЛР 1
 
 1.Выберите из таблицы orders все заказы
+
 '''
 SELECT * FROM orders;
 '''
+
 ![image](https://github.com/user-attachments/assets/23460e5a-748e-4c98-af98-3b637623958c)
 
 2.Выберите из таблицы orders все заказы кроме новых. У новых заказов status равен "new". Использовать in

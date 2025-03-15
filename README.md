@@ -102,3 +102,5 @@ create table users ( id int (10) unsigned, first_name varchar (50) unsigned, las
 Верное решение:
 
 create table users ( id int (10) unsigned, first_name varchar (50), last_name varchar (60), bio text ); INSERT INTO users (id, first_name, last_name, bio) VALUES (1,'Антон','Кулик','С отличием окончил 39 лицей.'), (2,'Сергей','Давыдов',''), (3,'Дмитрий','Соколов','Профессиональный программист.')
+
+![image](https://github.com/user-attachments/assets/2713ba61-ab0d-4490-8b05-c56a7af914be)

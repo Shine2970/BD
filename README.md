@@ -20,8 +20,10 @@ SELECT * FROM orders WHERE STATUS IN ('cancelled','in_progress','delivery')
 -
 ![image](https://github.com/user-attachments/assets/2f208a4d-1ca9-4cfb-8e36-058f3dc827e7)
 
-ЛР 2
 
+
+ЛР 2
+-
 1.Выберите из таблицы orders 3 самых дешевых заказа за всё время. Данные нужно отсортировать в порядке убывания цены. Отмененные заказы не учитывайте.
 -
 ![image](https://github.com/user-attachments/assets/6de610d5-391d-46e1-b894-db1ed9330e77)
@@ -48,8 +50,10 @@ SELECT * FROM orders WHERE STATUS IN ('cancelled','in_progress','delivery')
 
 ![image](https://github.com/user-attachments/assets/1288a625-6daf-4162-8be0-1e61b328eea4)
 
-Лр 3 
 
+
+Лр 3 
+-
 1.Создайте таблицу users с полем id типа INT и двумя текстовыми полями, которые будут хранить имя (first_name) и фамилию (last_name). Длина имени и фамилии не превышает 50 символов.
 -
 Добавьте в таблицу трех пользователей: Дмитрия Иванова, Анатолия Белого и Дениса Давыдова.
@@ -59,7 +63,7 @@ SELECT * FROM orders WHERE STATUS IN ('cancelled','in_progress','delivery')
 ![image](https://github.com/user-attachments/assets/4096d56a-3ebb-4e19-a839-ecc0fd60b75a)
 
 Лр 4
-
+-
 1.Создайте таблицу users для хранения информации о пользователях сайта. В таблице должны быть следующие поля: id – идентификатор, целое положительное; email – адрес электронной почты, строка не более 100 символов; date_joined – дата регистрации 
 (достаточно хранить дату, без времени) last_activity – дата и время последней активности (с точностью до секунд).
 -

@@ -107,3 +107,13 @@ create table users ( id int (10) unsigned, first_name varchar (50) unsigned, las
 create table users ( id int (10) unsigned, first_name varchar (50), last_name varchar (60), bio text ); INSERT INTO users (id, first_name, last_name, bio) VALUES (1,'Антон','Кулик','С отличием окончил 39 лицей.'), (2,'Сергей','Давыдов',''), (3,'Дмитрий','Соколов','Профессиональный программист.')
 
 ![image](https://github.com/user-attachments/assets/2713ba61-ab0d-4490-8b05-c56a7af914be)
+
+Лр 5
+-
+1.Выберите из таблицы orders 4 самых дорогих заказов за всё время.Данные нужно отсортировать в порядке убывания цены.Отмененные заказы не учитывайте.
+-
+![image](https://github.com/user-attachments/assets/db0006af-01b0-4f01-8c18-c70eb71fc894)
+
+Решение:
+-
+![image](https://github.com/user-attachments/assets/4fdb479a-cbe0-4390-a832-6d73cd1e419f)

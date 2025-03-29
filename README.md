@@ -9,8 +9,9 @@ SELECT * FROM orders;
 
 2.Выберите из таблицы orders все заказы кроме новых. У новых заказов status равен "new". Использовать in
 -
+```
 SELECT * FROM orders WHERE STATUS IN ('cancelled','in_progress','delivery')
-
+```
 ![image](https://github.com/user-attachments/assets/37ed988f-4a88-4c2b-bc07-a68dc8c8b53f)
 
 3.Выберите из таблицы orders все новые и отмененные заказы. У отмененных заказов status равен "cancelled". У новых заказов status равен "new".

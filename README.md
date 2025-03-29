@@ -146,3 +146,12 @@ create table users ( id int (10) unsigned, first_name varchar (50), last_name va
 
 
 ![image](https://github.com/user-attachments/assets/a3a53f5d-5ca0-4c44-93a3-16ed39a2581e)
+
+5.Из таблицы ниже сделать выборку на основе задания: Сайт выводит товары по 5 штук. Выберите из таблицы products товары, которые пользователи увидят на 3 странице каталога при сортировке в порядке возрастания цены (price).
+-
+
+![image](https://github.com/user-attachments/assets/9979c601-7080-4dfc-a9c3-d7c4257b7e93)
+
+Решение:
+-
+![image](https://github.com/user-attachments/assets/29595c87-3fe0-4736-a29a-9de0bf693299)

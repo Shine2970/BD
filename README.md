@@ -73,7 +73,8 @@ INSERT INTO users (id, email, date_joined, last_activity) VALUES (1, "user1@doma
 Верное решение: 
 ```
 create table users ( id int(10) unsigned, email varchar (100), date_joined date, last_activity datetime );
-insert into users (id, email, date_joined,last_activity) values (1,'user1@domain.com', '2014-12-12','2016-04-08 12:34:54'), (2,'user2@domain.com', '2014-12-12','2017-02-13 11:46:53'), (3,'user3@domain.com', '2014-12-13','2017-04-04 05:12:07');
+insert into users (id, email, date_joined,last_activity) values (1,'user1@domain.com', '2014-12-12','2016-04-08 12:34:54'),
+(2,'user2@domain.com', '2014-12-12','2017-02-13 11:46:53'), (3,'user3@domain.com', '2014-12-13','2017-04-04 05:12:07');
 ```
 ![image](https://github.com/user-attachments/assets/d1e72b07-f656-41cf-aa8d-06c4cd585b0c)
 
@@ -88,7 +89,8 @@ Create table calendar ( id int unsigned, user_id int unsigned, doctor_id int uns
 Верное решение:
 ```
 Create table calendar ( id int unsigned, user_id int unsigned, doctor_id int unsigned, visit_date datetime);
-Insert into calendar (id, user_id, doctor_id, visit_date) Values (1, 1914 , 1, '2017-04-08 12:00:00'), (2, 12, 1, '2017-04-08 12:30:00'), (3, 4641, 2, '2017-04-09 09:00:00'), (4, 784, 1,'2017-04-08 13:00:00'), (5, 15, 2,'2017-04-09 10:00:00') 
+Insert into calendar (id, user_id, doctor_id, visit_date) Values (1, 1914 , 1, '2017-04-08 12:00:00'),
+(2, 12, 1, '2017-04-08 12:30:00'), (3, 4641, 2, '2017-04-09 09:00:00'), (4, 784, 1,'2017-04-08 13:00:00'), (5, 15, 2,'2017-04-09 10:00:00') 
 ```
 ![image](https://github.com/user-attachments/assets/b3af42ac-b570-424f-bb73-dadf7cf39b34)
 
@@ -103,7 +105,8 @@ create table users ( id int (10) unsigned, first_name varchar (50) unsigned, las
 Верное решение:
 ```
 create table users ( id int (10) unsigned, first_name varchar (50), last_name varchar (60), bio text );
-INSERT INTO users (id, first_name, last_name, bio) VALUES (1,'Антон','Кулик','С отличием окончил 39 лицей.'), (2,'Сергей','Давыдов',''), (3,'Дмитрий','Соколов','Профессиональный программист.')
+INSERT INTO users (id, first_name, last_name, bio) VALUES (1,'Антон','Кулик','С отличием окончил 39 лицей.'),
+(2,'Сергей','Давыдов',''), (3,'Дмитрий','Соколов','Профессиональный программист.')
 ```
 ![image](https://github.com/user-attachments/assets/2713ba61-ab0d-4490-8b05-c56a7af914be)
 

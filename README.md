@@ -115,6 +115,9 @@ create table users ( id int (10) unsigned, first_name varchar (50), last_name va
 ![image](https://github.com/user-attachments/assets/db0006af-01b0-4f01-8c18-c70eb71fc894)
 
 Решение:
+```
+SELECT * FROM orders WHERE status != 'cancelled' ORDER BY sum DESC LIMIT 4;
+```
 -
 ![image](https://github.com/user-attachments/assets/4fdb479a-cbe0-4390-a832-6d73cd1e419f)
 
@@ -124,6 +127,9 @@ create table users ( id int (10) unsigned, first_name varchar (50), last_name va
 
 Решение:
 -
+```
+SELECT name, price FROM products WHERE count > 0 ORDER BY price ASC LIMIT 4;
+```
 ![image](https://github.com/user-attachments/assets/c9547b15-56aa-4a0c-a9cb-9acb4dd5967b)
 
 3.Выберите из таблицы orders три последних заказа (по дате date) стоимостью от 3200 рублей и выше.
@@ -133,7 +139,9 @@ create table users ( id int (10) unsigned, first_name varchar (50), last_name va
 
 Решение:
 -
-
+```
+SELECT * FROM orders WHERE sum >= 3200 ORDER BY date DESC LIMIT 3;
+```
 ![image](https://github.com/user-attachments/assets/fa96cebd-39df-4326-8fa4-945fb33445b4)
 
 4.Создайте данную таблицу:
@@ -142,6 +150,33 @@ create table users ( id int (10) unsigned, first_name varchar (50), last_name va
 
 Решение:
 -
+```
+CREATE TABLE products (
+    id INT PRIMARY KEY,
+    name VARCHAR(255),
+    count INT,
+    price DECIMAL(10, 2)
+);
+
+INSERT INTO products (id, name, count, price) VALUES
+(1, 'Стиральная машина', 5, 10000.00),
+(2, 'Холодильник', 0, 10000.00),
+(3, 'Микроволновка', 3, 4000.00),
+(4, 'Пылесос', 2, 4500.00),
+(5, 'Вентилятор', 0, 700.00),
+(6, 'Телевизор', 7, 31740.00),
+(7, 'Тостер', 2, 2500.00),
+(8, 'Принтер', 4, 3000.00),
+(9, 'Активные колонки', 1, 2900.00),
+(10, 'Ноутбук', 4, 36990.00),
+(11, 'Посудомоечная машина', 0, 17800.00),
+(12, 'Видеорегистратор', 23, 4000.00),
+(13, 'Смартфон', 8, 12300.00),
+(14, 'Флешка', 4, 1400.00),
+(15, 'Блендер', 0, 5500.00),
+(16, 'Газовая плита', 5, 11900.00),
+(17, 'Клавиатура', 3, 1800.00);
+```
 ![image](https://github.com/user-attachments/assets/7e86e58c-6476-43c1-8239-8a301ebd0654)
 
 
@@ -149,9 +184,11 @@ create table users ( id int (10) unsigned, first_name varchar (50), last_name va
 
 5.Из таблицы ниже сделать выборку на основе задания: Сайт выводит товары по 5 штук. Выберите из таблицы products товары, которые пользователи увидят на 3 странице каталога при сортировке в порядке возрастания цены (price).
 -
-
 ![image](https://github.com/user-attachments/assets/9979c601-7080-4dfc-a9c3-d7c4257b7e93)
 
 Решение:
 -
-![image](https://github.com/user-attachments/assets/29595c87-3fe0-4736-a29a-9de0bf693299)
+```
+SELECT name, price FROM products ORDER BY price ASC LIMIT 5 OFFSET 10;
+```
+![image](https://github.com/user-attachments/assets/193aed61-cd78-48cc-9708-2f1e00853770)

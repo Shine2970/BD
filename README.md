@@ -1,15 +1,17 @@
 ЛР 1
-
+-
 1.Выберите из таблицы orders все заказы
 -
+```
 SELECT * FROM orders;
-
+```
 ![image](https://github.com/user-attachments/assets/23460e5a-748e-4c98-af98-3b637623958c)
 
 2.Выберите из таблицы orders все заказы кроме новых. У новых заказов status равен "new". Использовать in
 -
+```
 SELECT * FROM orders WHERE STATUS IN ('cancelled','in_progress','delivery')
-
+```
 ![image](https://github.com/user-attachments/assets/37ed988f-4a88-4c2b-bc07-a68dc8c8b53f)
 
 3.Выберите из таблицы orders все новые и отмененные заказы. У отмененных заказов status равен "cancelled". У новых заказов status равен "new".
@@ -19,8 +21,6 @@ SELECT * FROM orders WHERE STATUS IN ('cancelled','in_progress','delivery')
 4.Выберите из таблицы orders все заказы содержащие более 3 товаров (products_count). Вывести нужно только номер (id) и сумму (sum) заказа.
 -
 ![image](https://github.com/user-attachments/assets/2f208a4d-1ca9-4cfb-8e36-058f3dc827e7)
-
-
 
 ЛР 2
 -
@@ -50,14 +50,10 @@ SELECT * FROM orders WHERE STATUS IN ('cancelled','in_progress','delivery')
 
 ![image](https://github.com/user-attachments/assets/1288a625-6daf-4162-8be0-1e61b328eea4)
 
-
-
 Лр 3 
 -
-1.Создайте таблицу users с полем id типа INT и двумя текстовыми полями, которые будут хранить имя (first_name) и фамилию (last_name). Длина имени и фамилии не превышает 50 символов.
+1.Создайте таблицу users с полем id типа INT и двумя текстовыми полями, которые будут хранить имя (first_name) и фамилию (last_name). Длина имени и фамилии не превышает 50 символов. Добавьте в таблицу трех пользователей: Дмитрия Иванова, Анатолия Белого и Дениса Давыдова.
 -
-Добавьте в таблицу трех пользователей: Дмитрия Иванова, Анатолия Белого и Дениса Давыдова.
-
 ![image](https://github.com/user-attachments/assets/d729b1c5-e31a-4e60-88c1-ad851c497f26)
 
 ![image](https://github.com/user-attachments/assets/4096d56a-3ebb-4e19-a839-ecc0fd60b75a)
@@ -75,9 +71,9 @@ CREATE TABLE users( id INT UNSIGNED, email VARCHAR(100), date_joined DATE, last_
 INSERT INTO users (id, email, date_joined, last_activity) VALUES (1, "user1@domain.com", "2014-12-12", "2016-04-08 12:34:54") INSERT INTO users (id, email, date_joined, last_activity) VALUES (2, "user2@domain.com", "2014-12-12", "2017-02-13 11:46:53") INSERT INTO users (id, email, date_joined, last_activity) VALUES (3, "user3@domain.com", "2014-12-13", "2017-04-04 05:12:07")
 
 Верное решение: 
-
+```
 create table users ( id int(10) unsigned, email varchar (100), date_joined date, last_activity datetime ); insert into users (id, email, date_joined,last_activity) values (1,'user1@domain.com', '2014-12-12','2016-04-08 12:34:54'), (2,'user2@domain.com', '2014-12-12','2017-02-13 11:46:53'), (3,'user3@domain.com', '2014-12-13','2017-04-04 05:12:07');
-
+```
 ![image](https://github.com/user-attachments/assets/d1e72b07-f656-41cf-aa8d-06c4cd585b0c)
 
 2.Создайте таблицу calendar для хранения календаря посетителей. В таблице должны быть следующие поля: id – идентификатор записи в календаре, целое положительное; user_id – идентификатор пользователя, целое положительное; doctor_id – идентификатор доктора, целое положительное; visit_date – дата и время визита (точность до секунд).
@@ -89,9 +85,9 @@ create table users ( id int(10) unsigned, email varchar (100), date_joined date,
 Create table calendar ( id int unsigned, user_id int unsigned, doctor_id int unsigned, visit_date datetime); Insert into calendar (id, user_id, doctor_id, visit_date) Values (1, 1914 , 1, '2017-04-08 12:00:00'), (2, 12, 1, '2017-04-08 12:30:00'), (3, 4641, 2, '2017-04-09 09:00:00'), (4, 4641, 2,'2017-04-09 09:00:00'), (5, 15, 2,'2017-04-09 10:00:00')
 
 Верное решение:
-
+```
 Create table calendar ( id int unsigned, user_id int unsigned, doctor_id int unsigned, visit_date datetime); Insert into calendar (id, user_id, doctor_id, visit_date) Values (1, 1914 , 1, '2017-04-08 12:00:00'), (2, 12, 1, '2017-04-08 12:30:00'), (3, 4641, 2, '2017-04-09 09:00:00'), (4, 784, 1,'2017-04-08 13:00:00'), (5, 15, 2,'2017-04-09 10:00:00') 
-
+```
 ![image](https://github.com/user-attachments/assets/b3af42ac-b570-424f-bb73-dadf7cf39b34)
 
 3.Создайте таблицу users , в которой будут следующие поля: id — идентификатор, целые положительные числа. first_name— имя, строки до 50 символов. last_name — фамилия, строки до 60 символов. bio — биография, текст до 65000 символов.
@@ -103,9 +99,9 @@ Create table calendar ( id int unsigned, user_id int unsigned, doctor_id int uns
 create table users ( id int (10) unsigned, first_name varchar (50) unsigned, last_name varchar (60) unsigned, bio text ); INSERT INTO users (id, first_name, last_name, bio) VALUES (1,'Антон','Кулик','С отличием окончил 39 лицей.'), (2,'Сергей','Давыдов',''), (3,'Дмитрий','Соколов','Профессиональный программист.')
 
 Верное решение:
-
+```
 create table users ( id int (10) unsigned, first_name varchar (50), last_name varchar (60), bio text ); INSERT INTO users (id, first_name, last_name, bio) VALUES (1,'Антон','Кулик','С отличием окончил 39 лицей.'), (2,'Сергей','Давыдов',''), (3,'Дмитрий','Соколов','Профессиональный программист.')
-
+```
 ![image](https://github.com/user-attachments/assets/2713ba61-ab0d-4490-8b05-c56a7af914be)
 
 Лр 5
@@ -115,10 +111,10 @@ create table users ( id int (10) unsigned, first_name varchar (50), last_name va
 ![image](https://github.com/user-attachments/assets/db0006af-01b0-4f01-8c18-c70eb71fc894)
 
 Решение:
+-
 ```
 SELECT * FROM orders WHERE status != 'cancelled' ORDER BY sum DESC LIMIT 4;
 ```
--
 ![image](https://github.com/user-attachments/assets/4fdb479a-cbe0-4390-a832-6d73cd1e419f)
 
 2.Выберите из таблицы products название и цены четырех самых дешевых товаров, которые есть на складе.

@@ -125,3 +125,24 @@ create table users ( id int (10) unsigned, first_name varchar (50), last_name va
 Решение:
 -
 ![image](https://github.com/user-attachments/assets/c9547b15-56aa-4a0c-a9cb-9acb4dd5967b)
+
+3.Выберите из таблицы orders три последних заказа (по дате date) стоимостью от 3200 рублей и выше.
+Данные отсортируйте по дате в обратном порядке.
+-
+![image](https://github.com/user-attachments/assets/09fb9dc4-4846-42ea-b3ee-39a4c7f5914d)
+
+Решение:
+-
+
+![image](https://github.com/user-attachments/assets/fa96cebd-39df-4326-8fa4-945fb33445b4)
+
+4.Создайте данную таблицу:
+-
+![image](https://github.com/user-attachments/assets/e638f7a4-d2e0-49ce-9243-a1a3e51426e9)
+
+Решение:
+-
+![image](https://github.com/user-attachments/assets/7e86e58c-6476-43c1-8239-8a301ebd0654)
+
+
+![image](https://github.com/user-attachments/assets/a3a53f5d-5ca0-4c44-93a3-16ed39a2581e)

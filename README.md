@@ -117,3 +117,11 @@ create table users ( id int (10) unsigned, first_name varchar (50), last_name va
 Решение:
 -
 ![image](https://github.com/user-attachments/assets/4fdb479a-cbe0-4390-a832-6d73cd1e419f)
+
+2.Выберите из таблицы products название и цены четырех самых дешевых товаров, которые есть на складе.
+-
+![image](https://github.com/user-attachments/assets/0d3eade9-f234-43c8-825d-966ed292ffb2)
+
+Решение:
+-
+![image](https://github.com/user-attachments/assets/c9547b15-56aa-4a0c-a9cb-9acb4dd5967b)

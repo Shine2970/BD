@@ -26,26 +26,41 @@ SELECT * FROM orders WHERE STATUS IN ('cancelled','in_progress','delivery')
 -
 1.Выберите из таблицы orders 3 самых дешевых заказа за всё время. Данные нужно отсортировать в порядке убывания цены. Отмененные заказы не учитывайте.
 -
+```
+SELECT * FROM orders WHERE STATUS != 'отменен' ORDER BY sum ASC LIMIT 3;
+``` 
 ![image](https://github.com/user-attachments/assets/6de610d5-391d-46e1-b894-db1ed9330e77)
 
 2.Выберите из таблицы orders 2 самых дорогих заказов за всё время. Данные нужно отсортировать в порядке убывания цены. Отмененные заказы не учитывайте.
 -
+```
+SELECT * FROM orders WHERE STATUS != 'отменен' ORDER BY sum DESC LIMIT 2;
+``` 
 ![image](https://github.com/user-attachments/assets/3f8fe9e3-d4f4-4b08-b5ed-0d374fe9bebf)
 
 3.Добавьте в таблицу orders данные о новом заказе стоимостью 8000 рублей. В заказе 4 товара (products).
 -
+```
+INSERT INTO orders (id, products, sum) VALUES (6, 4, 8000);
+``` 
 ![image](https://github.com/user-attachments/assets/11d54dfc-f39b-4381-8b39-08db0a22c9a2)
 
 ![image](https://github.com/user-attachments/assets/7472531a-e42f-458c-9899-9699d2e65cea)
 
 4.Добавьте в таблицу products новый товар — «VR-очки», стоимостью 70000 рублей в количестве (count) 2 штук.
 -
- ![image](https://github.com/user-attachments/assets/dabf7dc4-b441-4a55-8bea-48950d5cd7dc)
+```
+INSERT INTO products (id, name, price, count) VALUES (7, 'VR-очки', 70000, 2);
+```
+![image](https://github.com/user-attachments/assets/dabf7dc4-b441-4a55-8bea-48950d5cd7dc)
 
- ![image](https://github.com/user-attachments/assets/0154c806-38a1-45b6-b78f-ca24592eaeb0)
+![image](https://github.com/user-attachments/assets/0154c806-38a1-45b6-b78f-ca24592eaeb0)
 
 5.В таблицу products внесли данные с ошибкой, вместо "PS5" в наименовании написали IMAC. Исправьте ошибку.
 -
+```
+UPDATE products SET name = 'PS5' WHERE name = 'IMAC';
+```
 ![image](https://github.com/user-attachments/assets/45f95fbc-ed0f-4fd9-bc35-5b8a190ecc46)
 
 ![image](https://github.com/user-attachments/assets/1288a625-6daf-4162-8be0-1e61b328eea4)
@@ -54,6 +69,13 @@ SELECT * FROM orders WHERE STATUS IN ('cancelled','in_progress','delivery')
 -
 1.Создайте таблицу users с полем id типа INT и двумя текстовыми полями, которые будут хранить имя (first_name) и фамилию (last_name). Длина имени и фамилии не превышает 50 символов. Добавьте в таблицу трех пользователей: Дмитрия Иванова, Анатолия Белого и Дениса Давыдова.
 -
+```
+CREATE TABLE users (ID INT, first_name VARCHAR(50), last_name VARCHAR(50));
+INSERT INTO users (id, first_name, last_name)
+VALUE (1,'Дмитрий', 'Иванов'),
+(2, 'Анатолий', 'Белый'),
+(3, 'Денис', 'Давыдов');
+```
 ![image](https://github.com/user-attachments/assets/d729b1c5-e31a-4e60-88c1-ad851c497f26)
 
 ![image](https://github.com/user-attachments/assets/4096d56a-3ebb-4e19-a839-ecc0fd60b75a)

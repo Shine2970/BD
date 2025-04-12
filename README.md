@@ -223,3 +223,34 @@ INSERT INTO products (id, name, count, price) VALUES
 SELECT name, price FROM products ORDER BY price ASC LIMIT 5 OFFSET 10;
 ```
 ![image](https://github.com/user-attachments/assets/193aed61-cd78-48cc-9708-2f1e00853770)
+
+Лр 6
+-
+1.Создайте таблицу orders для хранения списка заказов:
+id — идентификатор, целое положительное.
+user_id — идентификатор пользователя, который оформил заказ. Целое положительное, NULL запрещен.
+amount — стоимость заказа. Целое положительное число не более 1 млн. NULL запрещен, по умолчанию 0.
+created — дата и время создания заказа. NULL запрещен.
+state — статус заказа. Выбор из new, cancelled, in_progress, delivered, completed. Можно выбрать только один вариант. NULL запрещен. По умолчанию должен стоять new.
+Добавьте 3 записи так, чтобы получалась таблица ниже:
+-
+![image](https://github.com/user-attachments/assets/71fe4878-4b0b-458a-a12e-be147e9bd201)
+
+Решение:
+```
+CREATE TABLE orders (
+    id INTEGER PRIMARY KEY AUTO_INCREMENT,
+    user_id INTEGER NOT NULL,
+    amount INTEGER NOT NULL DEFAULT 0,
+    created DATETIME NOT NULL,
+    state ENUM('new', 'cancelled', 'in_progress', 'delivered', 'completed') NOT NULL DEFAULT 'new',
+    CHECK (user_id > 0),
+    CHECK (amount >= 0 AND amount <= 1000000)
+);
+
+INSERT INTO orders (user_id, amount, created) VALUES (56, 5400, '2018-02-01 17:46:59');
+INSERT INTO orders (user_id, amount, created) VALUES (90, 249, '2018-02-01 19:13:04');
+INSERT INTO orders (user_id, amount, created) VALUES (78, 2200, '2018-02-01 22:43:09');
+
+SELECT * FROM orders;
+```

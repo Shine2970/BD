@@ -295,3 +295,40 @@ VALUES ('Андрей', 'Крючков', FALSE, FALSE);
 SELECT * FROM users;
 ```
 ![image](https://github.com/user-attachments/assets/733adbb7-e712-4fb8-a8ff-c5211619a2da)
+
+3.Создайте таблицу products для хранения товаров в интернет магазине:
+id — идентификатор, целое положительное.
+category_id — категория, целое положительное. Может принимать NULL. По умолчанию NULL.
+name — название, строка до 100 символов. NULL запрещен.
+count — количество, целое положительное до 255. NULL запрещен, по умолчанию 0.
+price — цена типа DECIMAL с 10 знаками, 2 из которых выделены для копеек. NULL запрещен, по умолчанию 0.00.
+Добавьте 3 записи так, чтобы получалась таблица
+-
+
+Решение:
+```
+-
+CREATE TABLE products (
+    id INTEGER PRIMARY KEY AUTO_INCREMENT,
+    category_id INTEGER NULL DEFAULT NULL,
+    name VARCHAR(100) NOT NULL,
+    count TINYINT UNSIGNED NOT NULL DEFAULT 0,
+    price DECIMAL(10, 2) NOT NULL DEFAULT 0.00,
+    CHECK (category_id > 0 OR category_id IS NULL),
+    CHECK (count >= 0 AND count <= 255),
+    CHECK (price >= 0)
+);
+
+INSERT INTO products (category_id, name, count, price)
+VALUES (1, 'Кружка', 5, 45.90);
+
+INSERT INTO products (category_id, name, count, price)
+VALUES (17, 'Фломастеры', 0, 78.00);
+
+INSERT INTO products (name, count, price)
+VALUES ('Сникерс', 12, 50.80);
+
+SELECT * FROM products;
+```
+![image](https://github.com/user-attachments/assets/b5b73ac0-9edc-4d43-98ec-3570feabe363)
+

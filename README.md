@@ -237,6 +237,7 @@ state — статус заказа. Выбор из new, cancelled, in_progress
 ![image](https://github.com/user-attachments/assets/71fe4878-4b0b-458a-a12e-be147e9bd201)
 
 Решение:
+-
 ```
 CREATE TABLE orders (
     id INTEGER PRIMARY KEY AUTO_INCREMENT,
@@ -256,3 +257,41 @@ SELECT * FROM orders;
 ```
 ![image](https://github.com/user-attachments/assets/2129e63a-67bc-4d85-9b5c-bd9270ac931d)
 
+2.Создайте таблицу users для хранения списка пользователей сайта:
+id — идентификатор, целое положительное.
+first_name — имя, строка до 20 символов. NULL запрещен.
+last_name — фамилия, строка до 20 символов. NULL запрещен.
+patronymic — отчество, строка до 20 символов. NULL запрещен, по умолчанию пустая строка.
+is_active — отметка об активности пользователя. Логическое поле, по умолчанию TRUE.
+is_superuser — отметка администратора. Логическое поле, по умолчанию FALSE.
+Добавьте 3 записи так, чтобы получалась таблица
+-
+![image](https://github.com/user-attachments/assets/64a74af7-1c09-40c3-a52a-34c4710709b1)
+
+Решение:
+-
+```
+CREATE TABLE users (
+    id INTEGER PRIMARY KEY AUTO_INCREMENT,
+    first_name VARCHAR(20) NOT NULL,
+    last_name VARCHAR(20) NOT NULL,
+    patronymic VARCHAR(20) NOT NULL DEFAULT '',
+    is_active BOOLEAN NOT NULL DEFAULT TRUE,
+    is_superuser BOOLEAN NOT NULL DEFAULT FALSE,
+    CHECK (LENGTH(first_name) <= 20),
+    CHECK (LENGTH(last_name) <= 20),
+    CHECK (LENGTH(patronymic) <= 20)
+);
+
+INSERT INTO users (first_name, last_name, patronymic, is_active, is_superuser)
+VALUES ('Дмитрий', 'Иванов', '', TRUE, FALSE);
+
+INSERT INTO users (first_name, last_name, patronymic, is_active, is_superuser)
+VALUES ('Анатолий', 'Белый', 'Сергеевич', TRUE, TRUE);
+
+INSERT INTO users (first_name, last_name, is_active, is_superuser)
+VALUES ('Андрей', 'Крючков', FALSE, FALSE);
+
+SELECT * FROM users;
+```
+![image](https://github.com/user-attachments/assets/733adbb7-e712-4fb8-a8ff-c5211619a2da)

@@ -306,8 +306,8 @@ price — цена типа DECIMAL с 10 знаками, 2 из которых 
 -
 
 Решение:
-```
 -
+```
 CREATE TABLE products (
     id INTEGER PRIMARY KEY AUTO_INCREMENT,
     category_id INTEGER NULL DEFAULT NULL,

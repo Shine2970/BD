@@ -254,3 +254,5 @@ INSERT INTO orders (user_id, amount, created) VALUES (78, 2200, '2018-02-01 22:4
 
 SELECT * FROM orders;
 ```
+![image](https://github.com/user-attachments/assets/2129e63a-67bc-4d85-9b5c-bd9270ac931d)
+
